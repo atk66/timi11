@@ -142,7 +142,20 @@ const p = document.createElement("p")
 
   let x = 1;
   //   Notið while loop hér að neðan, if og break
- 
+
+   
+    for (let i = 1; i <= 10; i++) {
+        if (i % 7 === 0) {
+            const p = document.createElement("p")
+        p.textContent = `${i}`
+        s.appendChild(p)
+        break 
+    }
+    const p = document.createElement("p")
+    p.textContent = i
+    s.appendChild(p)
+}
+
 
 }
 
@@ -159,6 +172,7 @@ const p = document.createElement("p")
 
   let num = 10;
   //   Notið do...while loop hér að neðan og breytu num
+ 
 }
 
 // Do...while – Verkefni 2
@@ -170,6 +184,8 @@ const p = document.createElement("p")
 
   let start = 1;
   //   Notið do...while loop hér að neðan og breytu start
+
+
 }
 
 // ------------------------------------------------------------
@@ -182,6 +198,13 @@ const p = document.createElement("p")
   const s = addSection("for...of – verkefni 1", "Prenta alla liti í fylki.");
 
   //   Notið for...of loop hér að neðan
+        for (let color of colors) {
+        const p = document.createElement("p")
+        console.log(color);
+        p.textContent = color.toUpperCase()
+        s.appendChild(p)
+    
+    }
 }
 
 // For...of – Verkefni 2
@@ -190,6 +213,18 @@ const p = document.createElement("p")
   const s = addSection("for...of – verkefni 2", "Sleppa litnum 'green'.");
 
   //   Notið for...of loop hér að neðan, if og continue
+
+        for (let color of colors) {
+                  if ("green") {
+            continue
+        }
+        const p = document.createElement("p")
+        console.log(color);
+        p.textContent = color.toUpperCase()
+        s.appendChild(p)
+    
+    }
+
 }
 
 // ------------------------------------------------------------
@@ -205,6 +240,14 @@ const p = document.createElement("p")
   );
 
   //   Notið for...in loop hér að neðan
+
+  for (const key in person) {
+        if (typeof person[key] === "person") {
+            const p = document.createElement("p")
+            p.textContent = `${key}: ${data[key]}`
+            s.appendChild(p)
+        }
+    }
 }
 
 // For...in – Verkefni 2
