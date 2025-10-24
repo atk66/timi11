@@ -43,7 +43,6 @@ function addSection(title, subtitle) {
 // For – Exercise 2: even numbers
 
 
-
 {
   const s = addSection(
     "For – verkefni 2",
@@ -51,13 +50,48 @@ function addSection(title, subtitle) {
   );
 
   //   Notið for loop hér að neðan og if ef þarf
+   for (let i = 1; i <= 10; i++) {
+        if (i === 1) {
+            continue
+        }
+        if (i === 3) {
+            continue
+        }
+         if (i === 5) {
+            continue
+        }
+         if (i === 7) {
+            continue
+        }
+         if (i === 9) {
+            continue
+        }
+        const p = document.createElement("p")
+        p.textContent = i
+        s.appendChild(p)
+    }
 }
+
+
 
 // For – Exercise 3: skip 5, stop at 8
 {
   const s = addSection("For – verkefni 3", "Sleppa 5 og stoppa við 8.");
 
   //   Notið for loop hér að neðan, if, continue og break
+for (let i = 1; i <= 10; i++) {
+if (i === 5) {
+continue
+}
+
+ if (i % 8 === 0) {
+  break
+ }
+const p = document.createElement("p")
+        p.textContent = i
+        s.appendChild(p)
+        
+    }
 }
 
 // ------------------------------------------------------------
@@ -68,9 +102,20 @@ function addSection(title, subtitle) {
 {
   const s = addSection("While – verkefni 1", "Telja frá 1 upp í 5.");
 
-  let count = 1;
+   let count = 1;
   //   Notið while loop hér að neðan og breytu count
-}
+ 
+  while (count <= 5) {
+    const p = document.createElement("p")
+    p.textContent = `Count: ${count}`
+    s.appendChild(p)
+    count ++;
+  }
+
+
+
+   }
+   
 
 // While – Verkefni 2: oddatölur
 {
@@ -78,6 +123,14 @@ function addSection(title, subtitle) {
 
   let i = 1;
   //   Notið while loop hér að neðan, if og breytu i
+  
+    while (i < 10) {
+        const p = document.createElement("p")
+        p.textContent = `Oddatala: ${i}`
+        s.appendChild(p)
+        i += 2
+
+    }
 }
 
 // While – Verkefni 3: stoppa á 7
@@ -89,6 +142,8 @@ function addSection(title, subtitle) {
 
   let x = 1;
   //   Notið while loop hér að neðan, if og break
+ 
+
 }
 
 // ------------------------------------------------------------
