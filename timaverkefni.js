@@ -242,9 +242,9 @@ const p = document.createElement("p")
   //   Notið for...in loop hér að neðan
 
   for (const key in person) {
-        if (typeof person[key] === "person") {
+        if (typeof person[key] === "name", "age", "country") {
             const p = document.createElement("p")
-            p.textContent = `${key}: ${data[key]}`
+            p.textContent = `${key}: ${person[key]}`
             s.appendChild(p)
         }
     }
@@ -259,4 +259,14 @@ const p = document.createElement("p")
   );
 
   //   Notið for...in loop hér að neðan, if og breytu key
+
+
+    for (const key in car) {
+        if (typeof car[key] === "brand", "color") {
+            const p = document.createElement("p")
+            p.textContent = `${key}: ${car[key]}`
+            s.appendChild(p)
+        }
+    }
+  
 }
