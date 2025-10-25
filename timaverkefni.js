@@ -172,7 +172,13 @@ const p = document.createElement("p")
 
   let num = 10;
   //   Notið do...while loop hér að neðan og breytu num
- 
+
+ do {
+  console.log(num);
+  num++;
+ } while (num < 10);
+ console.log(num);
+
 }
 
 // Do...while – Verkefni 2
@@ -185,6 +191,10 @@ const p = document.createElement("p")
   let start = 1;
   //   Notið do...while loop hér að neðan og breytu start
 
+  do{
+    console.log(start);
+    start++;
+  } while (start <= 3);
 
 }
 
@@ -214,8 +224,8 @@ const p = document.createElement("p")
 
   //   Notið for...of loop hér að neðan, if og continue
 
-        for (let color of colors) {
-                  if ("green") {
+        for (const color of colors) {
+                  if (color === "green") {
             continue
         }
         const p = document.createElement("p")
